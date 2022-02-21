@@ -30,8 +30,10 @@ section{
 
     
 }
-nav.navbar{
-   background:#f34e0d;;
+nav.navbar{background: transparent;}
+nav.navbar.scroll{
+   background:#f34e0d;
+   transition: 1s;
 }
 
 .navbar-brand{margin-left:-20px;}
@@ -42,6 +44,11 @@ nav.navbar{
     object-fit:cover;
     width:100%;
     height:500px;
+   
+}
+.imgbox:hover img{
+    transform:scale(1.0023);
+    transition: 1s;
 }
 .accordion-button:not(.collapsed){
     background-color: transparent;
@@ -66,7 +73,14 @@ nav.navbar{
 strong{
     color:#cb19db;
 }
-
+.carousel-item img{background-size:50% 50%/cover;
+    transform:matrix3d(1.08, 0.00187303, 0, 0, -0.00187303, 1.07316, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+;}
+.carousel-item.active img{
+    transform: matrix3d(1.00284, 0.00175029, 0, 0, -0.00175029, 1.00284, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: 3s;
+    
+}
 
     .point_cycle{
         width:150px; 
@@ -380,7 +394,7 @@ cursor: pointer;
 
             .mari{margin-left:10vw}
             .oha img{margin-right:5vw ;}
-            .carousel-control-prev{left:-10%} 
+            
 
 
 
